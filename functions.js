@@ -40,6 +40,19 @@ const myFunctions = {
     } else {
       element.classList.add("positiveResult");
     }
+  },
+  invertColours: function () {
+    const mainResultElements = document.querySelectorAll(".mainResult");
+
+    for (let i = 0; i < mainResultElements.length; i++) {
+      if (mainResultElements[i].classList.contains("negativeResult")) {
+        mainResultElements[i].classList.remove("negativeResult");
+        mainResultElements[i].classList.add("positiveResult");
+      } else if (mainResultElements[i].classList.contains("positiveResult")) {
+        mainResultElements[i].classList.remove("positiveResult");
+        mainResultElements[i].classList.add("negativeResult");
+      }
+    }
   }
 };
 
