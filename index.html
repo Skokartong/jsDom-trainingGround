@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript training ground</title>
     <button id="createListBtn">Create list</button>
+    <button id="deleteDivBtn">Delete div</button>
     <script src="functions.js"></script>
     <script>
       console.log("salt> In the head.");
@@ -40,6 +41,11 @@
         .getElementById("createListBtn")
         .addEventListener("click", function () {
           myFunctions.addListInMain(5);
+        });
+      document
+        .getElementById("deleteDivBtn")
+        .addEventListener("click", function () {
+          myFunctions.removeDivById("companyName");
         });
     </script>
   </body>
