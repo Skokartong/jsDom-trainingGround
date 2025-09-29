@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript training ground</title>
     <script>
-      const name = prompt("What is your name");
-      alert(`Hello ${name}!`);
+      function getCompanyName() {
+        return "SALT";
+      }
+      console.log("salt> End of body");
     </script>
   </head>
   <body>
+    <script>
+      console.log("salt> Start of body");
+    </script>
     <main>
       <div>Content 1</div>
       <div>Content 2</div>
       <div>Content 3</div>
     </main>
+    <script>
+      const name = getCompanyName();
+      console.log(`salt> In the head. Company name is ${name}`);
+    </script>
   </body>
 </html>
