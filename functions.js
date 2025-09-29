@@ -21,6 +21,26 @@ const myFunctions = {
       element.remove();
     }
   },
+  addResultStyling: function () {
+  const mainResultElements = document.querySelectorAll(".mainResult");
+
+  for (let i = 0; i < mainResultElements.length; i++) {
+    const content = mainResultElements[i].textContent;
+
+    this.addStyleBasedOnContent(mainResultElements[i], content);
+  }
+},
+  addStyleBasedOnContent: function (element, content) {
+    const value = parseFloat(content);
+    if (isNaN(value)) {
+      element.classList.add("negativeResult");
+      element.textContent = "Not a number";
+    } else if (value < 0) {
+      element.classList.add("negativeResult");
+    } else {
+      element.classList.add("positiveResult");
+    }
+  }
 };
 
 console.log("salt> Functions loaded");

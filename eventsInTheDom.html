@@ -18,6 +18,19 @@
         color: white;
       }
     </style>
+    <script>
+      document.querySelectorAll(".mainResult").forEach((element) => {
+        const value = parseFloat(element.innerText);
+        if (isNaN(value)) {
+          element.classList.add("negativeResult");
+          element.innerText = "Not a number";
+        } else if (value < 0) {
+          element.classList.add("negativeResult");
+        } else {
+          element.classList.add("positiveResult");
+        }
+      });
+    </script>
   </head>
   <body>
     <main>
@@ -25,9 +38,5 @@
       <h1 class="mainResult">-1000</h1>
       <h1 class="mainResult">A name - not a number</h1>
     </main>
-    <script src="functions.js"></script>
-    <script>
-      myFunctions.addResultStyling();
-    </script>
   </body>
 </html>
