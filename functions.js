@@ -15,6 +15,12 @@ const myFunctions = {
     const main = document.querySelector("main");
     main.appendChild(ulElement);
   },
+  removeDivById: function (id) {
+    const element = document.getElementById(id);
+    if (element != undefined && element != null) {
+      element.remove();
+    }
+  },
 };
 
 console.log("salt> Functions loaded");
