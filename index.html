@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript training ground</title>
+    <button id="createListBtn">Create list</button>
     <script src="functions.js"></script>
     <script>
       console.log("salt> In the head.");
@@ -35,6 +36,11 @@
       for (let i = 0; i < boldNodes.length; i++) {
         boldNodes[i].innerHTML += " ... and bold selected with query";
       }
+      document
+        .getElementById("createListBtn")
+        .addEventListener("click", function () {
+          myFunctions.addListInMain(5);
+        });
     </script>
   </body>
 </html>
